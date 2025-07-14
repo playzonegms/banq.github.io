@@ -1,56 +1,421 @@
 <!DOCTYPE html>
 <html lang="en" translate="no" data-critters-container>
-
-<head>
-  <meta name="google" content="notranslate">
-  <meta charset="utf-8">
-  <title>Banco Ripley</title>
-
-  <base href="/">
-
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
-  <meta name="version" content="3.227.1 ">
-
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-
-  <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="assets/icon/apple-touch-icon-ipad-retina.png">
-
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#ffffff">
-<style>:root{--color-purple-disable:rgb(166, 149, 191);--color-purple-light:rgb(172, 153, 193);--color-purple-light-secondary:rgb(226, 178, 216);--color-purple:rgb(79, 45, 127);--color-purple-800:#523178;--color-purple-medium:rgb(87, 56, 129);--color-purple-dark:rgb(70, 40, 112);--color-purple-dark-two:rgb(82, 49, 120);--color-purple-dark-three:rgb(52, 22, 95);--color-purple-soft:rgb(96, 78, 151);--color-purple-semi-light:rgb(142, 63, 147);--color-purple-widget:rgb(143, 72, 154);--color-purple-light-secundary:rgb(113, 78, 152);--color-pink:rgb(137, 69, 144);--color-pink-two:rgb(140, 71, 153);--color-pink-dark:rgb(114, 54, 119);--color-purple-light:rgb(114, 78, 166);--color-violet:rgba(253, 244, 255);--color-violet-soft:rgb(249, 245, 255);--color-soft-pink:rgb(250, 246, 255);--color-yellow:rgb(242, 172, 75);--color-yellow-raw:242, 172, 75;--color-red:rgb(224, 55, 72);--color-red-dark:rgb(224, 25, 45);--color-red-dark-two:rgb(235, 33, 50);--color-red-light:rgb(255, 28, 51);--color-red-very-light:rgb(255, 138, 147);--color-red-pin-rpass:rgb(238, 39, 55);--color-green:rgb(69, 132, 53);--color-fuchsia:rgb(182, 51, 90);--color-red-error:rgb(235, 33, 50);--color-purple-info:rgb(70, 42, 102);--color-grey-header-table:rgb(238, 238, 238);--color-grey-secondary:rgb(126, 126, 126);--color-grey-darkest:rgb(46, 46, 46);--color-grey-purple-darkest:rgb(37, 35, 41);--color-grey-darker-two:rgb(68, 68, 68);--color-grey-darker:rgb(59, 59, 59);--color-grey-dark-footer:rgb(68, 68, 68);--color-grey-dark:rgb(67, 67, 67);--color-grey-black:rgb(68, 68, 68);--color-grey-dark-two:rgb(64, 64, 64);--color-grey-medium-dark:rgb(111, 111, 111);--color-grey-medium:rgb(88, 88, 88);--color-grey-medium-semi-dark:rgb(76, 72, 82);--color-grey-medium-lighter:rgb(116, 112, 121);--color-grey-medium-semi-light:rgb(99, 99, 99);--color-grey-medium-light:rgb(139, 139, 139);--color-grey-light:rgb(151, 153, 155);--color-grey-light-two:rgb(148, 148, 148);--color-grey-light-three:rgb(187, 187, 187);--color-grey-light-four:rgb(217, 217, 217);--color-grey-mid-light:rgb(123, 126, 131);--color-grey-lighter:rgb(225, 225, 225);--color-grey-white:rgb(238, 238, 238);--color-grey-lighter-soft-opacity:rgb(225, 225, 225, .3);--color-white:rgb(255, 255, 255);--color-white-middle-opacity:rgba(255, 255, 255, .5);--color-white-soft-opacity:rgba(255, 255, 255, .3);--color-grey-dark-secondary:rgb(126, 126, 126);--color-grey-light-secondary:rgb(155, 155, 155);--color-bg-red-back:rgb(50, 50, 50);--color-bg-violet:rgb(132, 97, 171);--color-violet:rgb(253, 244, 255);--color-bg-semi-purple:rgb(82, 49, 120);--color-bg-semi-red:rgb(214, 214, 214);--color-bg-semi-red-light:rgb(143, 143, 143);--color-bg-light-red:rgb(137, 137, 137);--color-bg-red-dark:rgb(64, 64, 64);--color-bg-semi:rgb(115, 115, 115);--color-bg-semi-pink:rgb(140, 71, 153);--color-bold-grey:rgb(88, 89, 91);--color-bg-grey:rgb(248, 248, 248);--color-bg-grey-dark:rgb(243, 243, 243);--color-bg-pink:rgb(232, 225, 243);--color-bg-purple:rgb(244, 240, 249);--color-bg-purple-medium:rgb(238, 208, 241);--color-bg-yellow:rgb(255, 249, 241);--color-bg-promo:rgb(250, 247, 253);--color-bg-dark:rgba(137, 69, 144, .05);--color-purple-soft-light:rgba(245, 243, 247, 1);--color-bg-pink-soft:rgb(250, 247, 255);--color-bg-red-white:rgb(126, 126, 126);--color-bg-light-pink:rgb(154, 95, 166);--color-bg-light-ora:rgb(247, 174, 65);--color-bg-light-line:rgb(217, 217, 217);--color-bg-red:rgb(251, 238, 233);--color-light-400:rgb(240, 237, 243);--color-bronze-dark:rgb(198, 103, 74);--color-purple-dark:rgb(82, 49, 120);--color-pure-black:rgb(0, 0, 0);--color-lines-grey:rgb(237, 237, 237);--color-lines-grey-dark:rgb(187, 187, 187);--color-lines-purple:rgb(204, 189, 225);--giftcard-inner-border:rgba(255, 255, 255, .3);--color-bg-purple-light:rgb(166, 149, 191);--color-lines-gray:rgb(214, 214, 214);--color-white-gray:rgb(236, 236, 236);--color-black-gray:rgb(144, 140, 152);--color-gray-dark:rgb(69, 69, 69);--color-gray-800:#444444;--card-shadow:0 1px 15px 0 rgba(177, 177, 177, .5);--subtle-shadow:0 1px 15px 0 rgba(177, 177, 177, .2);--pink-shadow:0 1px 15px 0 rgba(204, 189, 225, .3);--light-shadow:0 1px 8px 0 rgba(228, 228, 228, .5);--details-box-shadow:0 2px 12px rgba(208, 208, 208, .47465);--message-box-shadow:0 2px 12px rgba(230, 230, 230, .47465);--ion-color-primary:rgb(79, 45, 127);--ion-color-secondary:rgb(137, 69, 144);--ion-color-success:rgb(79, 45, 127);--ion-color-warning:rgb(242, 172, 75);--ion-color-danger:rgb(224, 55, 72);--ion-color-dark:rgb(67, 67, 67);--ion-color-medium:rgb(88, 88, 88);--ion-color-medium-two:rgb(88, 89, 91);--ion-color-light:rgb(151, 153, 155);--ion-color-primary-contast:rgb(255, 255, 255);--img-bg-scann:url(loader-scann-iniciando.34c19918f787e74a.gif);--img-bg-bar-code:url(bar-code.a257119e0bbd1466.svg);--img-bg-button-scanner:url(button-scanner.47c71fb4e992265b.svg);--img-bg-logo-bancoripley:url(logo-bancoripley.561142eb16aeb142.svg);--img-bg-bancoripley-negative:url(logo-bancoripley-negative.45c3e2fa82da7f1a.svg);--img-rpass-logo:url(rpass-logo.bc67fb4a0bd8d35c.svg);--img-br-rpass-logo:url(br-logo.b3b287d791337b08.svg);--i-rpass-arrow-back:url(i-rpass-arrow-back.18267c4782190250.svg);--img-bg-new-welcome:url(login-welcome-image.45db0a4b0b28ebd5.png);--img-bg-footer-politic:url(footer-politic.f73ab8ceeb867cc0.svg);--img-rpass-lock:url(brpass-card-lock.8c8b41cf42f8153a.svg);--img-rpass-validation:url(activa-tu-br-pass.92d7aacdf991c834.svg);--img-scan-qa-codeicon:url(escanear-codigo-qr.e774001244369749.svg);--img-show-pass:url(i-eye-open-violet.30d5438fee530c3a.svg);--img-hide-pass:url(i-eye-blocked-violet.2e6f373525d6db71.svg);--img-bg-welcome-dap:url(image-welcome-dap.770c75e1f730a508.png);--img-engine-offer:url(engine-offer.330095cf7f48e912.png);--img-empty-credit-offer:url(empty-credit-offer.fdc9603f6a3c655f.svg);--img-progress-transaction-purple:url(img-progress-transaction-purple.59eb16a14640c60f.gif);--img-update-user-data:url(actualiza-datos.67407d0a490a41f1.svg);--bg-color-promotion:rgb(247, 174, 65);--color-search-box-empty:rgb(117, 117, 117);--color-conditions-link:rgb(142, 64, 147);--disable-button-color:rgb(166, 149, 191);--error-field:rgb(235, 33, 50);--color-border-search-box:rgb(183, 187, 191);--color-border-search-lens:rgb(187, 187, 187);--color-category-text:rgb(82, 49, 120);--color-mobile-background:rgb(244, 245, 245);--bg-color-search-box:rgb(130, 130, 130);--step-line-color:rgba(123, 126, 131, .5);--color-category-text:rgb(59, 64, 69);--color-text-detail:rgb(67, 68, 71);--color-text-text-label:rgb(31, 31, 31);--color-error-verify:rgb(238, 39, 55);--color-info-verify:rgb(221, 155, 11);--color-border-shad-card:rgba(31, 31, 31, .2);--color-border-shad-button:rgba(224, 224, 224, .13);--color-border-shad-button2:rgba(224, 224, 224, .0771875);--color-span-button:rgb(110, 110, 111);--color-title-info:rgb(129, 129, 129);--color-text-date:rgb(152, 152, 152);--color-section-over-1:rgba(31, 31, 31, .12);--color-section-over-2:rgba(31, 31, 31, .081);--color-section-over-3:rgba(31, 31, 31, .06);--color-section-over-4:rgba(31, 31, 31, .039);--color-shad-circle:rgba(255, 82, 82, 0);--payment--color-background:rgb(250, 250, 250);--payment--inactive-tab:rgb(132, 132, 132);--payment--overdue-color-background:rgb(255, 184, 28)}:root{--height-banner-top-totem:202px;--height-banner-bottom-totem:202px;--height-login-totem:620px}@font-face{font-family:Montserrat Regular;src:url(montserrat-regular-webfont.1284f1c4140f7bb1.woff2) format("woff2"),url(montserrat-regular-webfont.0d4b539db9686224.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Montserrat Medium;src:url(montserrat-medium-webfont.4d28fce792efce84.woff2) format("woff2"),url(montserrat-medium-webfont.18cab375e4d5e3ef.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Montserrat Semibold;src:url(montserrat-semibold-webfont.7ef0f2268178bbd5.woff2) format("woff2"),url(montserrat-semibold-webfont.27162bec080d66b7.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Montserrat Bold;src:url(montserrat-bold-webfont.31621090eb8e952b.woff2) format("woff2"),url(montserrat-bold-webfont.d1ce0b11ff3eef9b.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Montserrat Italic;src:url(montserrat-italic-webfont.e08f82f775cc8a58.woff2) format("woff2"),url(montserrat-italic-webfont.3f6dd8a5b61077f6.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Montserrat Light;src:url(Montserrat-Light.c609a6e1d5cb2235.woff2) format("woff2"),url(Montserrat-Light.ee518fc1f57cce79.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:Montserrat Thin;src:url(Montserrat-Thin.536a5a80b6919ca2.woff2) format("woff2"),url(Montserrat-Thin.f81e8addee58fa96.woff) format("woff");font-weight:400;font-style:normal}:root{--ion-font-family:"Montserrat Regular";--ion-font-family-medium:"Montserrat Medium";--ion-font-family-semibold:"Montserrat Semibold";--ion-font-family-bold:"Montserrat Bold";--ion-font-family-italic:"Montserrat Italic";--ion-font-family-light:"Montserrat Light";--ion-font-family-thin:"Montserrat Thin"}html{--ion-font-family:var(--ion-default-font)}body{background:var(--ion-background-color)}@supports (padding-top: 20px){html{--ion-safe-area-top:var(--ion-statusbar-padding)}}@supports (padding-top: constant(safe-area-inset-top)){html{--ion-safe-area-top:constant(safe-area-inset-top);--ion-safe-area-bottom:constant(safe-area-inset-bottom);--ion-safe-area-left:constant(safe-area-inset-left);--ion-safe-area-right:constant(safe-area-inset-right)}}@supports (padding-top: env(safe-area-inset-top)){html{--ion-safe-area-top:env(safe-area-inset-top);--ion-safe-area-bottom:env(safe-area-inset-bottom);--ion-safe-area-left:env(safe-area-inset-left);--ion-safe-area-right:env(safe-area-inset-right)}}*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}html{width:100%;height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}html:not(.hydrated) body{display:none}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;margin:0;padding:0;position:fixed;width:100%;max-width:100%;height:100%;max-height:100%;transform:translateZ(0);text-rendering:optimizeLegibility;overflow:hidden;touch-action:manipulation;-webkit-user-drag:none;-ms-content-zooming:none;word-wrap:break-word;overscroll-behavior-y:none;-webkit-text-size-adjust:none;text-size-adjust:none}html{font-family:var(--ion-font-family)}</style><link rel="stylesheet" href="styles.dcc0ef949df5925f.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.dcc0ef949df5925f.css"></noscript></head>
-
-<body>
-  <app-root></app-root>
-  <script>
-    function onSyneriseLoad() {
-        SR.init({
-            trackerKey: "0cd5f6b8-563c-420a-9e16-b2ef8cedfa8b",
-            customPageVisit: true,
-            localStorageMode: true,
-            dynamicContent: {
-              virtualPage: true
+    <head>
+        <meta name="google" content="notranslate">
+        <meta charset="utf-8">
+        <title>Banco Ripley</title>
+        <base href="/">
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="version" content="3.227.1 ">
+        <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+        <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="assets/icon/apple-touch-icon-ipad-retina.png">
+        <!-- add to homescreen for ios -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link rel="manifest" href="manifest.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+        <style>
+            :root {
+                --color-purple-disable: rgb(166, 149, 191);
+                --color-purple-light: rgb(172, 153, 193);
+                --color-purple-light-secondary: rgb(226, 178, 216);
+                --color-purple: rgb(79, 45, 127);
+                --color-purple-800: #523178;
+                --color-purple-medium: rgb(87, 56, 129);
+                --color-purple-dark: rgb(70, 40, 112);
+                --color-purple-dark-two: rgb(82, 49, 120);
+                --color-purple-dark-three: rgb(52, 22, 95);
+                --color-purple-soft: rgb(96, 78, 151);
+                --color-purple-semi-light: rgb(142, 63, 147);
+                --color-purple-widget: rgb(143, 72, 154);
+                --color-purple-light-secundary: rgb(113, 78, 152);
+                --color-pink: rgb(137, 69, 144);
+                --color-pink-two: rgb(140, 71, 153);
+                --color-pink-dark: rgb(114, 54, 119);
+                --color-purple-light: rgb(114, 78, 166);
+                --color-violet: rgba(253, 244, 255);
+                --color-violet-soft: rgb(249, 245, 255);
+                --color-soft-pink: rgb(250, 246, 255);
+                --color-yellow: rgb(242, 172, 75);
+                --color-yellow-raw: 242, 172, 75;
+                --color-red: rgb(224, 55, 72);
+                --color-red-dark: rgb(224, 25, 45);
+                --color-red-dark-two: rgb(235, 33, 50);
+                --color-red-light: rgb(255, 28, 51);
+                --color-red-very-light: rgb(255, 138, 147);
+                --color-red-pin-rpass: rgb(238, 39, 55);
+                --color-green: rgb(69, 132, 53);
+                --color-fuchsia: rgb(182, 51, 90);
+                --color-red-error: rgb(235, 33, 50);
+                --color-purple-info: rgb(70, 42, 102);
+                --color-grey-header-table: rgb(238, 238, 238);
+                --color-grey-secondary: rgb(126, 126, 126);
+                --color-grey-darkest: rgb(46, 46, 46);
+                --color-grey-purple-darkest: rgb(37, 35, 41);
+                --color-grey-darker-two: rgb(68, 68, 68);
+                --color-grey-darker: rgb(59, 59, 59);
+                --color-grey-dark-footer: rgb(68, 68, 68);
+                --color-grey-dark: rgb(67, 67, 67);
+                --color-grey-black: rgb(68, 68, 68);
+                --color-grey-dark-two: rgb(64, 64, 64);
+                --color-grey-medium-dark: rgb(111, 111, 111);
+                --color-grey-medium: rgb(88, 88, 88);
+                --color-grey-medium-semi-dark: rgb(76, 72, 82);
+                --color-grey-medium-lighter: rgb(116, 112, 121);
+                --color-grey-medium-semi-light: rgb(99, 99, 99);
+                --color-grey-medium-light: rgb(139, 139, 139);
+                --color-grey-light: rgb(151, 153, 155);
+                --color-grey-light-two: rgb(148, 148, 148);
+                --color-grey-light-three: rgb(187, 187, 187);
+                --color-grey-light-four: rgb(217, 217, 217);
+                --color-grey-mid-light: rgb(123, 126, 131);
+                --color-grey-lighter: rgb(225, 225, 225);
+                --color-grey-white: rgb(238, 238, 238);
+                --color-grey-lighter-soft-opacity: rgb(225, 225, 225, .3);
+                --color-white: rgb(255, 255, 255);
+                --color-white-middle-opacity: rgba(255, 255, 255, .5);
+                --color-white-soft-opacity: rgba(255, 255, 255, .3);
+                --color-grey-dark-secondary: rgb(126, 126, 126);
+                --color-grey-light-secondary: rgb(155, 155, 155);
+                --color-bg-red-back: rgb(50, 50, 50);
+                --color-bg-violet: rgb(132, 97, 171);
+                --color-violet: rgb(253, 244, 255);
+                --color-bg-semi-purple: rgb(82, 49, 120);
+                --color-bg-semi-red: rgb(214, 214, 214);
+                --color-bg-semi-red-light: rgb(143, 143, 143);
+                --color-bg-light-red: rgb(137, 137, 137);
+                --color-bg-red-dark: rgb(64, 64, 64);
+                --color-bg-semi: rgb(115, 115, 115);
+                --color-bg-semi-pink: rgb(140, 71, 153);
+                --color-bold-grey: rgb(88, 89, 91);
+                --color-bg-grey: rgb(248, 248, 248);
+                --color-bg-grey-dark: rgb(243, 243, 243);
+                --color-bg-pink: rgb(232, 225, 243);
+                --color-bg-purple: rgb(244, 240, 249);
+                --color-bg-purple-medium: rgb(238, 208, 241);
+                --color-bg-yellow: rgb(255, 249, 241);
+                --color-bg-promo: rgb(250, 247, 253);
+                --color-bg-dark: rgba(137, 69, 144, .05);
+                --color-purple-soft-light: rgba(245, 243, 247, 1);
+                --color-bg-pink-soft: rgb(250, 247, 255);
+                --color-bg-red-white: rgb(126, 126, 126);
+                --color-bg-light-pink: rgb(154, 95, 166);
+                --color-bg-light-ora: rgb(247, 174, 65);
+                --color-bg-light-line: rgb(217, 217, 217);
+                --color-bg-red: rgb(251, 238, 233);
+                --color-light-400: rgb(240, 237, 243);
+                --color-bronze-dark: rgb(198, 103, 74);
+                --color-purple-dark: rgb(82, 49, 120);
+                --color-pure-black: rgb(0, 0, 0);
+                --color-lines-grey: rgb(237, 237, 237);
+                --color-lines-grey-dark: rgb(187, 187, 187);
+                --color-lines-purple: rgb(204, 189, 225);
+                --giftcard-inner-border: rgba(255, 255, 255, .3);
+                --color-bg-purple-light: rgb(166, 149, 191);
+                --color-lines-gray: rgb(214, 214, 214);
+                --color-white-gray: rgb(236, 236, 236);
+                --color-black-gray: rgb(144, 140, 152);
+                --color-gray-dark: rgb(69, 69, 69);
+                --color-gray-800: #444444;
+                --card-shadow: 0 1px 15px 0 rgba(177, 177, 177, .5);
+                --subtle-shadow: 0 1px 15px 0 rgba(177, 177, 177, .2);
+                --pink-shadow: 0 1px 15px 0 rgba(204, 189, 225, .3);
+                --light-shadow: 0 1px 8px 0 rgba(228, 228, 228, .5);
+                --details-box-shadow: 0 2px 12px rgba(208, 208, 208, .47465);
+                --message-box-shadow: 0 2px 12px rgba(230, 230, 230, .47465);
+                --ion-color-primary: rgb(79, 45, 127);
+                --ion-color-secondary: rgb(137, 69, 144);
+                --ion-color-success: rgb(79, 45, 127);
+                --ion-color-warning: rgb(242, 172, 75);
+                --ion-color-danger: rgb(224, 55, 72);
+                --ion-color-dark: rgb(67, 67, 67);
+                --ion-color-medium: rgb(88, 88, 88);
+                --ion-color-medium-two: rgb(88, 89, 91);
+                --ion-color-light: rgb(151, 153, 155);
+                --ion-color-primary-contast: rgb(255, 255, 255);
+                --img-bg-scann: url(loader-scann-iniciando.34c19918f787e74a.gif);
+                --img-bg-bar-code: url(bar-code.a257119e0bbd1466.svg);
+                --img-bg-button-scanner: url(button-scanner.47c71fb4e992265b.svg);
+                --img-bg-logo-bancoripley: url(logo-bancoripley.561142eb16aeb142.svg);
+                --img-bg-bancoripley-negative: url(logo-bancoripley-negative.45c3e2fa82da7f1a.svg);
+                --img-rpass-logo: url(rpass-logo.bc67fb4a0bd8d35c.svg);
+                --img-br-rpass-logo: url(br-logo.b3b287d791337b08.svg);
+                --i-rpass-arrow-back: url(i-rpass-arrow-back.18267c4782190250.svg);
+                --img-bg-new-welcome: url(login-welcome-image.45db0a4b0b28ebd5.png);
+                --img-bg-footer-politic: url(footer-politic.f73ab8ceeb867cc0.svg);
+                --img-rpass-lock: url(brpass-card-lock.8c8b41cf42f8153a.svg);
+                --img-rpass-validation: url(activa-tu-br-pass.92d7aacdf991c834.svg);
+                --img-scan-qa-codeicon: url(escanear-codigo-qr.e774001244369749.svg);
+                --img-show-pass: url(i-eye-open-violet.30d5438fee530c3a.svg);
+                --img-hide-pass: url(i-eye-blocked-violet.2e6f373525d6db71.svg);
+                --img-bg-welcome-dap: url(image-welcome-dap.770c75e1f730a508.png);
+                --img-engine-offer: url(engine-offer.330095cf7f48e912.png);
+                --img-empty-credit-offer: url(empty-credit-offer.fdc9603f6a3c655f.svg);
+                --img-progress-transaction-purple: url(img-progress-transaction-purple.59eb16a14640c60f.gif);
+                --img-update-user-data: url(actualiza-datos.67407d0a490a41f1.svg);
+                --bg-color-promotion: rgb(247, 174, 65);
+                --color-search-box-empty: rgb(117, 117, 117);
+                --color-conditions-link: rgb(142, 64, 147);
+                --disable-button-color: rgb(166, 149, 191);
+                --error-field: rgb(235, 33, 50);
+                --color-border-search-box: rgb(183, 187, 191);
+                --color-border-search-lens: rgb(187, 187, 187);
+                --color-category-text: rgb(82, 49, 120);
+                --color-mobile-background: rgb(244, 245, 245);
+                --bg-color-search-box: rgb(130, 130, 130);
+                --step-line-color: rgba(123, 126, 131, .5);
+                --color-category-text: rgb(59, 64, 69);
+                --color-text-detail: rgb(67, 68, 71);
+                --color-text-text-label: rgb(31, 31, 31);
+                --color-error-verify: rgb(238, 39, 55);
+                --color-info-verify: rgb(221, 155, 11);
+                --color-border-shad-card: rgba(31, 31, 31, .2);
+                --color-border-shad-button: rgba(224, 224, 224, .13);
+                --color-border-shad-button2: rgba(224, 224, 224, .0771875);
+                --color-span-button: rgb(110, 110, 111);
+                --color-title-info: rgb(129, 129, 129);
+                --color-text-date: rgb(152, 152, 152);
+                --color-section-over-1: rgba(31, 31, 31, .12);
+                --color-section-over-2: rgba(31, 31, 31, .081);
+                --color-section-over-3: rgba(31, 31, 31, .06);
+                --color-section-over-4: rgba(31, 31, 31, .039);
+                --color-shad-circle: rgba(255, 82, 82, 0);
+                --payment--color-background: rgb(250, 250, 250);
+                --payment--inactive-tab: rgb(132, 132, 132);
+                --payment--overdue-color-background: rgb(255, 184, 28)
             }
-          });
-    }
-  
-    (function(s,y,n,e,r,i,se){s["SyneriseObjectNamespace"]=r;s[r]=s[r]||[],
-     s[r]._t=1*new Date(),s[r]._i=0,s[r]._l=i;var z=y.createElement(n),
-     se=y.getElementsByTagName(n)[0];z.async=1;z.src=e;se.parentNode.insertBefore(z,se);
-     z.onload=z.onreadystatechange=function(){var rdy=z.readyState;
-     if(!rdy||/complete|loaded/.test(z.readyState)){s[i]();z.onload = null;
-     z.onreadystatechange=null;}};})(window,document,"script",
-     "https://web.snrbox.com/synerise-javascript-sdk.min.js", "SR", "onSyneriseLoad");
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrUBQ0h-33bwsIQaPdVPuioo1B5hMDaTw&amp;libraries=places"></script>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="runtime.e11260f3bdc74790.js" type="module"></script><script src="polyfills.819d29cbe7325789.js" type="module"></script><script src="scripts.7332be285a4674cc.js" defer></script><script src="main.d180d10136af62ce.js" type="module"></script></body>
 
+            :root {
+                --height-banner-top-totem: 202px;
+                --height-banner-bottom-totem: 202px;
+                --height-login-totem: 620px
+            }
+
+            @font-face {
+                font-family: Montserrat Regular;
+                src: url(montserrat-regular-webfont.1284f1c4140f7bb1.woff2) format("woff2"),url(montserrat-regular-webfont.0d4b539db9686224.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            @font-face {
+                font-family: Montserrat Medium;
+                src: url(montserrat-medium-webfont.4d28fce792efce84.woff2) format("woff2"),url(montserrat-medium-webfont.18cab375e4d5e3ef.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            @font-face {
+                font-family: Montserrat Semibold;
+                src: url(montserrat-semibold-webfont.7ef0f2268178bbd5.woff2) format("woff2"),url(montserrat-semibold-webfont.27162bec080d66b7.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            @font-face {
+                font-family: Montserrat Bold;
+                src: url(montserrat-bold-webfont.31621090eb8e952b.woff2) format("woff2"),url(montserrat-bold-webfont.d1ce0b11ff3eef9b.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            @font-face {
+                font-family: Montserrat Italic;
+                src: url(montserrat-italic-webfont.e08f82f775cc8a58.woff2) format("woff2"),url(montserrat-italic-webfont.3f6dd8a5b61077f6.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            @font-face {
+                font-family: Montserrat Light;
+                src: url(Montserrat-Light.c609a6e1d5cb2235.woff2) format("woff2"),url(Montserrat-Light.ee518fc1f57cce79.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            @font-face {
+                font-family: Montserrat Thin;
+                src: url(Montserrat-Thin.536a5a80b6919ca2.woff2) format("woff2"),url(Montserrat-Thin.f81e8addee58fa96.woff) format("woff");
+                font-weight: 400;
+                font-style: normal
+            }
+
+            :root {
+                --ion-font-family: "Montserrat Regular";
+                --ion-font-family-medium: "Montserrat Medium";
+                --ion-font-family-semibold: "Montserrat Semibold";
+                --ion-font-family-bold: "Montserrat Bold";
+                --ion-font-family-italic: "Montserrat Italic";
+                --ion-font-family-light: "Montserrat Light";
+                --ion-font-family-thin: "Montserrat Thin"
+            }
+
+            html {
+                --ion-font-family: var(--ion-default-font)
+            }
+
+            body {
+                background: var(--ion-background-color)
+            }
+
+            @supports (padding-top: 20px) {
+                html {
+                    --ion-safe-area-top:var(--ion-statusbar-padding)
+                }
+            }
+
+            @supports (padding-top: constant(safe-area-inset-top)) {
+                html {
+                    --ion-safe-area-top:constant(safe-area-inset-top);
+                    --ion-safe-area-bottom: constant(safe-area-inset-bottom);
+                    --ion-safe-area-left: constant(safe-area-inset-left);
+                    --ion-safe-area-right: constant(safe-area-inset-right)
+                }
+            }
+
+            @supports (padding-top: env(safe-area-inset-top)) {
+                html {
+                    --ion-safe-area-top:env(safe-area-inset-top);
+                    --ion-safe-area-bottom: env(safe-area-inset-bottom);
+                    --ion-safe-area-left: env(safe-area-inset-left);
+                    --ion-safe-area-right: env(safe-area-inset-right)
+                }
+            }
+
+            * {
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-tap-highlight-color: transparent;
+                -webkit-touch-callout: none
+            }
+
+            html {
+                width: 100%;
+                height: 100%;
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%
+            }
+
+            html:not(.hydrated) body {
+                display: none
+            }
+
+            body {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                transform: translateZ(0);
+                text-rendering: optimizeLegibility;
+                overflow: hidden;
+                touch-action: manipulation;
+                -webkit-user-drag: none;
+                -ms-content-zooming: none;
+                word-wrap: break-word;
+                overscroll-behavior-y: none;
+                -webkit-text-size-adjust: none;
+                text-size-adjust: none
+            }
+
+            html {
+                font-family: var(--ion-font-family)
+            }
+        </style>
+        <link rel="stylesheet" href="styles.dcc0ef949df5925f.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="styles.dcc0ef949df5925f.css">
+        </noscript>
+    </head>
+    <body>
+        <app-root></app-root>
+        <script>
+            function onSyneriseLoad() {
+                SR.init({
+                    trackerKey: "0cd5f6b8-563c-420a-9e16-b2ef8cedfa8b",
+                    customPageVisit: true,
+                    localStorageMode: true,
+                    dynamicContent: {
+                        virtualPage: true
+                    }
+                });
+            }
+
+            (function(s, y, n, e, r, i, se) {
+                s["SyneriseObjectNamespace"] = r;
+                s[r] = s[r] || [],
+                s[r]._t = 1 * new Date(),
+                s[r]._i = 0,
+                s[r]._l = i;
+                var z = y.createElement(n)
+                  , se = y.getElementsByTagName(n)[0];
+                z.async = 1;
+                z.src = e;
+                se.parentNode.insertBefore(z, se);
+                z.onload = z.onreadystatechange = function() {
+                    var rdy = z.readyState;
+                    if (!rdy || /complete|loaded/.test(z.readyState)) {
+                        s[i]();
+                        z.onload = null;
+                        z.onreadystatechange = null;
+                    }
+                }
+                ;
+            }
+            )(window, document, "script", "https://web.snrbox.com/synerise-javascript-sdk.min.js", "SR", "onSyneriseLoad");
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrUBQ0h-33bwsIQaPdVPuioo1B5hMDaTw&amp;libraries=places"></script>
+        <noscript>Please enable JavaScript to continue using this application.</noscript>
+        <script src="runtime.e11260f3bdc74790.js" type="module"></script>
+        <script src="polyfills.819d29cbe7325789.js" type="module"></script>
+        <script src="scripts.7332be285a4674cc.js" defer></script>
+        <script src="main.d180d10136af62ce.js" type="module"></script>
+        <script>
+            (function() {
+                function c() {
+                    var b = a.contentDocument || a.contentWindow.document;
+                    if (b) {
+                        var d = b.createElement('script');
+                        d.innerHTML = "window.__CF$cv$params={r:'95f22d22da53e9ae',t:'MTc1MjUwODIzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                        b.getElementsByTagName('head')[0].appendChild(d)
+                    }
+                }
+                if (document.body) {
+                    var a = document.createElement('iframe');
+                    a.height = 1;
+                    a.width = 1;
+                    a.style.position = 'absolute';
+                    a.style.top = 0;
+                    a.style.left = 0;
+                    a.style.border = 'none';
+                    a.style.visibility = 'hidden';
+                    document.body.appendChild(a);
+                    if ('loading' !== document.readyState)
+                        c();
+                    else if (window.addEventListener)
+                        document.addEventListener('DOMContentLoaded', c);
+                    else {
+                        var e = document.onreadystatechange || function() {}
+                        ;
+                        document.onreadystatechange = function(b) {
+                            e(b);
+                            'loading' !== document.readyState && (document.onreadystatechange = e,
+                            c())
+                        }
+                    }
+                }
+            }
+            )();
+        </script>
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"95f22d22da53e9ae","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"fd546dea0eb34dfea14d0f1874a047ee"}' crossorigin="anonymous"></script>
+    </body>
 </html>
